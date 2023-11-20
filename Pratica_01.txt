@@ -1,0 +1,98 @@
+1. O que é uma classe em Java e qual é a diferença entre uma classe e um objeto? Dê 5 exemplos mostrando-os em C++ e em Java:
+
+Uma classe em Java é uma estrutura que define o comportamento e os atributos de objetos. Um objeto é uma instância de uma classe. A diferença fundamental é que a classe é a estrutura ou modelo, enquanto o objeto é uma instância específica criada a partir dessa classe.
+
+Exemplos:
+Java:
+public class Carro {
+    // Atributos
+    String modelo;
+    int ano;
+
+    // Método construtor
+    public Carro(String modelo, int ano) {
+        this.modelo = modelo;
+        this.ano = ano;
+    }
+}
+
+// Criação de um objeto
+Carro meuCarro = new Carro("Fusca", 2000);
+C++:
+// Definição da classe
+class Carro {
+public:
+    // Atributos
+    string modelo;
+    int ano;
+
+    // Método construtor
+    Carro(string modelo, int ano) {
+        this->modelo = modelo;
+        this->ano = ano;
+    }
+};
+
+// Criação de um objeto
+Carro meuCarro("Fusca", 2000);
+
+2. Como você declara uma variável em Java e quais são os tipos de dados primitivos mais comuns? Faça um paralelo entre isso e a mesma coisa na linguagem C++:
+java:
+// Declaração de variável
+int idade = 25;
+
+// Tipos de dados primitivos comuns
+int, float, double, boolean, char
+c++:
+// Declaração de variável
+int idade = 25;
+
+// Tipos de dados primitivos comuns
+int, float, double, bool, char
+
+
+3. Explique o conceito de herança em Java e como você pode criar uma subclasse a partir de uma classe existente. Faça um paralelo com C++, apresentando 5 exemplos:
+
+A herança permite que uma classe herde atributos e métodos de outra classe. Em Java e C++, a herança é indicada pela palavra-chave extends em Java e : public em C++. Aqui estão exemplos em ambas as linguagens:
+Java:
+// Classe base
+class Animal {
+    void comer() {
+        System.out.println("Animal comendo");
+    }
+}
+
+// Subclasse
+class Cachorro extends Animal {
+    void latir() {
+        System.out.println("Au au!");
+    }
+}
+c++:
+// Classe base
+class Animal {
+public:
+    void comer() {
+        cout << "Animal comendo" << endl;
+    }
+};
+
+// Subclasse
+class Cachorro : public Animal {
+public:
+    void latir() {
+        cout << "Au au!" << endl;
+    }
+};
+
+4. Quando declaramos uma variável em Java, temos, na verdade, um ponteiro. Em C++ é diferente. Discorra sobre esse aspecto:
+
+Em Java, todas as variáveis de objetos são referências, ou seja, são ponteiros para objetos na memória. Isso significa que, quando você cria um objeto em Java, na verdade está criando uma referência a esse objeto. Em C++, você pode ter variáveis que são ponteiros, mas também pode ter variáveis que armazenam diretamente o valor do objeto, dependendo da forma como são declaradas.
+
+Java:
+// Declaração de variável de objeto
+MinhaClasse objeto = new MinhaClasse();
+C++:
+// Declaração de variável de objeto por valor
+MinhaClasse objeto;
+Em Java, a variável objeto é uma referência ao objeto, enquanto em C++, a variável objeto armazena diretamente o objeto. A manipulação de ponteiros em C++ oferece mais flexibilidade, mas também requer maior atenção para evitar problemas de gerenciamento de memória.
